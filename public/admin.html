@@ -23,14 +23,28 @@
         <div>
           <h1>Painel Administrativo</h1>
           <p>
-            Cadastre, edite ou remova imóveis. Tudo fica salvo no navegador
-            usando armazenamento local.
+            Cadastre, edite ou remova imóveis. Somente usuarios autorizados
+            conseguem acessar o painel.
           </p>
         </div>
         <button id="clear-all" class="btn-outline">Limpar todos</button>
       </section>
 
       <section class="admin-grid">
+        <div id="login-card" class="admin-card login-card">
+          <h2>Acesso ao painel</h2>
+          <label>
+            Email
+            <input id="login-email" type="email" placeholder="admin@lucasvargas.com" />
+          </label>
+          <label>
+            Senha
+            <input id="login-password" type="password" placeholder="Sua senha" />
+          </label>
+          <button id="login-btn" class="btn-solid" type="button">Entrar</button>
+          <p id="login-error" class="login-error"></p>
+        </div>
+
         <form id="property-form" class="admin-card">
           <h2>Novo imóvel</h2>
           <input type="hidden" id="property-id" />

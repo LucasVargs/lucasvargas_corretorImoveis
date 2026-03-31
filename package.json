@@ -1,0 +1,16 @@
+{
+  "name": "lucasvargas-corretor",
+  "version": "1.0.0",
+  "description": "Site e painel admin para corretor de imoveis.",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.0"
+  }
+}

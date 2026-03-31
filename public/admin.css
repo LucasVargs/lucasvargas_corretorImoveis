@@ -34,6 +34,16 @@
   gap: 14px;
 }
 
+.login-card {
+  border-style: dashed;
+}
+
+.login-error {
+  color: #c23d3d;
+  font-size: 13px;
+  min-height: 18px;
+}
+
 .admin-card h2 {
   font-family: "Playfair Display", serif;
   margin-bottom: 6px;

@@ -1,5 +1,3 @@
-const storageKey = "lv_properties";
-
 const grid = document.getElementById("property-grid");
 const emptyState = document.getElementById("empty-state");
 
@@ -14,18 +12,18 @@ const formatCurrency = (value) => {
   });
 };
 
-const getProperties = () => {
-  const data = localStorage.getItem(storageKey);
-  if (!data) return [];
+const fetchProperties = async () => {
   try {
-    return JSON.parse(data);
+    const response = await fetch("/api/properties");
+    if (!response.ok) return [];
+    return await response.json();
   } catch {
     return [];
   }
 };
 
-const render = () => {
-  const properties = getProperties();
+const render = async () => {
+  const properties = await fetchProperties();
   grid.innerHTML = "";
 
   if (properties.length === 0) {
